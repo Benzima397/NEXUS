@@ -1,0 +1,150 @@
+@import 'tailwindcss';
+
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+@source '../../storage/framework/views/*.php';
+
+@theme {
+    --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+        'Segoe UI Symbol', 'Noto Color Emoji';
+
+    --color-nexus-bg: #050816;
+    --color-nexus-bg-subtle: #0a0f1e;
+    --color-nexus-bg-card: #0c1222;
+    --color-nexus-bg-elevated: #111827;
+    --color-nexus-primary: #EB5233;
+    --color-nexus-primary-hover: #d4472a;
+    --color-nexus-primary-glow: rgba(235, 82, 51, 0.4);
+    --color-nexus-white: #FFFFFF;
+    --color-nexus-muted: #94A3B8;
+    --color-nexus-dim: #64748B;
+    --color-nexus-border: rgba(255, 255, 255, 0.06);
+    --color-nexus-border-hover: rgba(255, 255, 255, 0.12);
+    --color-nexus-success: #22C55E;
+    --color-nexus-success-glow: rgba(34, 197, 94, 0.3);
+    --color-nexus-warning: #F59E0B;
+    --color-nexus-info: #3B82F6;
+    --color-nexus-glass: rgba(255, 255, 255, 0.03);
+    --color-nexus-glass-border: rgba(255, 255, 255, 0.08);
+}
+
+@layer base {
+    html { scroll-behavior: smooth; }
+    body { background-color: var(--color-nexus-bg); color: var(--color-nexus-white); }
+    ::selection { background-color: var(--color-nexus-primary); color: var(--color-nexus-white); }
+}
+
+@utility fade-in {
+    animation: fadeIn 0.5s ease-out forwards;
+    opacity: 0;
+}
+
+@utility fade-in-up {
+    animation: fadeInUp 0.5s ease-out forwards;
+    opacity: 0;
+}
+
+@utility stagger-1 { animation-delay: 0.05s; }
+@utility stagger-2 { animation-delay: 0.1s; }
+@utility stagger-3 { animation-delay: 0.15s; }
+@utility stagger-4 { animation-delay: 0.2s; }
+@utility stagger-5 { animation-delay: 0.25s; }
+@utility stagger-6 { animation-delay: 0.3s; }
+
+@utility glass {
+    background: var(--color-nexus-glass);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid var(--color-nexus-glass-border);
+}
+
+@utility glass-strong {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(30px);
+    -webkit-backdrop-filter: blur(30px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+@utility glow-sm {
+    box-shadow: 0 0 15px -3px var(--color-nexus-primary-glow);
+}
+
+@utility glow-md {
+    box-shadow: 0 0 25px -5px var(--color-nexus-primary-glow);
+}
+
+@utility glow-success {
+    box-shadow: 0 0 12px -3px var(--color-nexus-success-glow);
+}
+
+@utility text-gradient {
+    background: linear-gradient(135deg, var(--color-nexus-white) 0%, var(--color-nexus-muted) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+@utility text-gradient-primary {
+    background: linear-gradient(135deg, var(--color-nexus-primary) 0%, #f97316 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+@utility bg-grid {
+    background-image:
+        linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+    background-size: 64px 64px;
+}
+
+@utility bg-radial {
+    background: radial-gradient(ellipse at center, var(--color-nexus-primary-glow) 0%, transparent 70%);
+}
+
+@utility timeline-line {
+    position: relative;
+    &::before {
+        content: '';
+        position: absolute;
+        left: 7px;
+        top: 24px;
+        bottom: 0;
+        width: 1px;
+        background: linear-gradient(to bottom, var(--color-nexus-border), transparent);
+    }
+}
+
+@utility timeline-dot {
+    position: relative;
+    &::before {
+        content: '';
+        position: absolute;
+        left: 4px;
+        top: 8px;
+        width: 7px;
+        height: 7px;
+        border-radius: 9999px;
+        background: var(--color-nexus-primary);
+        box-shadow: 0 0 0 3px var(--color-nexus-bg), 0 0 10px var(--color-nexus-primary-glow);
+    }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(12px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes pulse-glow {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
