@@ -8,7 +8,7 @@
 
             <div class="flex items-center gap-4">
                 <a
-                    href="https://github.com/benjamin"
+                    href="{{ config('nexus.contact.github') }}"
                     target="_blank"
                     rel="noopener noreferrer"
                     class="text-nexus-muted transition-colors duration-200 hover:text-nexus-white"
@@ -19,7 +19,7 @@
                     </svg>
                 </a>
                 <a
-                    href="https://linkedin.com/in/benjamin"
+                    href="{{ config('nexus.contact.linkedin') }}"
                     target="_blank"
                     rel="noopener noreferrer"
                     class="text-nexus-muted transition-colors duration-200 hover:text-nexus-white"
@@ -30,7 +30,7 @@
                     </svg>
                 </a>
                 <a
-                    href="mailto:hello@benjamin.dev"
+                    href="mailto:{{ config('nexus.contact.email') }}"
                     class="text-nexus-muted transition-colors duration-200 hover:text-nexus-white"
                     aria-label="Email"
                 >

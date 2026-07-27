@@ -128,7 +128,7 @@ return [
                 'Persistent conversation history',
                 'Web-based management interface',
             ],
-            'github' => 'https://github.com/benjamin/ai-assistant',
+            'github' => 'https://github.com/Benzima397/ai-assistant.git',
             'live_demo' => null,
             'gallery' => [],
         ],
@@ -258,8 +258,8 @@ return [
                 'GitHub integration for live project data',
                 'Admin dashboard for content management',
             ],
-            'github' => 'https://github.com/benjamin/nexus',
-            'live_demo' => null,
+            'github' => 'https://github.com/Benzima397/NEXUS.git',
+            'live_demo' => 'Bencodes.tech',
             'gallery' => [],
         ],
     ],
@@ -394,10 +394,10 @@ return [
 
         'education' => [
             [
-                'title' => 'Computer Science',
-                'company' => 'University',
-                'period' => '2016 — 2020',
-                'year' => '2016',
+                'title' => 'Office Technology & Management',
+                'company' => 'Polytechnic',
+                'period' => '2025 — 2027',
+                'year' => '2025',
                 'description' => 'Foundation in software engineering principles, algorithms, data structures and system design.',
             ],
         ],
@@ -406,9 +406,9 @@ return [
     ],
 
     'contact' => [
-        'email' => 'hello@benjamin.dev',
-        'github' => 'https://github.com/benjamin',
-        'linkedin' => 'https://linkedin.com/in/benjamin',
+        'email' => 'benjaminnwaochei@gmail.com',
+        'github' => 'https://github.com/Benzima397',
+        'linkedin' => 'https://www.linkedin.com/in/benjamin-nwaochei/',
         'message' => 'Open a communication channel. Every transmission is read and responded to.',
     ],
 
@@ -416,21 +416,21 @@ return [
         [
             'name' => 'GitHub',
             'description' => 'Code repositories and open source work',
-            'url' => 'https://github.com/benjamin',
+            'url' => 'https://github.com/Benzima397',
             'status' => 'online',
             'type' => 'external',
         ],
         [
             'name' => 'LinkedIn',
             'description' => 'Professional network and updates',
-            'url' => 'https://linkedin.com/in/benjamin',
+            'url' => 'https://www.linkedin.com/in/benjamin-nwaochei/',
             'status' => 'online',
             'type' => 'external',
         ],
         [
             'name' => 'Email',
             'description' => 'Direct communication channel',
-            'url' => 'mailto:hello@benjamin.dev',
+            'url' => 'mailto:benjaminnwaochei@gmail.com',
             'status' => 'online',
             'type' => 'direct',
         ],
