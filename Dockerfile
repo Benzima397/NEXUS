@@ -21,6 +21,9 @@ RUN composer install --no-dev --optimize-autoloader
 RUN npm install
 RUN npm run build
 
+RUN mkdir -p storage/logs
+RUN chmod -R 775 storage bootstrap/cache
+
 RUN php artisan optimize || true
 
 EXPOSE 10000
