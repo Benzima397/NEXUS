@@ -4,7 +4,7 @@ return [
 
     'name' => 'NEXUS',
     'author' => 'Benjamin Nwaochei',
-    'title' => 'NEXUS — Engineering Lab',
+    'title' => 'NEXUS',
     'description' => 'Benjamin Nwaochei builds secure, scalable software that connects systems and automates business processes.',
     'tagline' => 'Backend Software Engineer',
 
@@ -219,7 +219,7 @@ return [
             'gallery' => [],
         ],
         [
-            'title' => 'NEXUS',
+    'title' => 'NEXUS — Engineering Lab',
             'slug' => 'nexus',
             'status' => 'online',
             'status_label' => 'Online',
